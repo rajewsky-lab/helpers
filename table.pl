@@ -1,5 +1,88 @@
 #!/usr/bin/perl
 
+# frequency table generation script
+# Copyright (C) 2018  Marcel Schilling
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+#######################
+# general information #
+#######################
+
+# file:      table.pl
+# created:   2018-09-27
+# author(s): Filippos Klironomos <fklirono@gmx.de> [FK],
+#            Marcel Schilling <marcel.schilling@mdc-berlin.de> [MS]
+# license:   GNU Affero General Public License Version 3 (GNU AGPL v3)
+# purpose:   mimick R's `table` function treating TSV columns as vectors
+#            (STDIN to STDOUT)
+
+
+#########
+# usage #
+#########
+
+# see $usage below
+
+
+######################################
+# change log (reverse chronological) #
+######################################
+
+# 2018-09-27: added license & comment boilerplate [MS]
+#             initial version [FK]
+
+
+##############
+# background #
+##############
+
+# This script was written by Filippos some time ago and included in this
+# repository based on the following email:
+
+# From: Filippos Klironomos <fklirono@gmx.de>
+# To: Marcel Schilling <marcel@schilling-home.net>
+# Date: Thu, 27 Sep 2018 16:13:52 +0200
+# Subject: Re: table.pl
+# 
+# sure, add it to the repo, use this GMX address.
+# 
+# Cheers,
+# 
+# F:-)
+# 
+# 
+# 
+# On 09/27/2018 04:05 PM, Marcel Schilling wrote:
+# > Hey Filippos,
+# >
+# > In /data/rajewsky/code, I found table.pl created by me.
+# > I think I got it from you. Dave initiated
+# > https://github.com/rajewsky-lab/helpers and I wonder if you'd be fine
+# > having it there (under AGPL-3.0)?
+# > I would take care of commenting it, I'd just need to know which email
+# > address of yours you'd like it to be commited with.
+# >
+# > Cheers,
+# > Marcel
+
+
+#########################
+# original script by FK #
+#########################
+
 use Getopt::Long;
 
 my $usage="
